@@ -25,11 +25,14 @@ import {
   Pencil,
   Plus,
   PlusCircle,
+  RefreshCw,
   Search,
   Smartphone,
   Sparkles,
   Twitter,
+  Upload,
   User,
+  X,
 } from 'lucide-react';
 
 import book1 from '@/assets/svg/book1.svg';
@@ -133,6 +136,7 @@ const IconList = {
   play,
   plus: Plus,
   plusCircle: PlusCircle,
+  reload: RefreshCw,
   search: Search,
   smartphone: Smartphone,
   sound,
@@ -140,9 +144,11 @@ const IconList = {
   spinner: Loader2,
   twitter: Twitter,
   up,
+  upload: Upload,
   user: User,
   wallet,
   x,
+  X,
   xBold,
   logout: LogOut,
 };

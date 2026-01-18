@@ -64,7 +64,7 @@ import image1 from '@/assets/svg/image_1.svg';
 import information from '@/assets/svg/information.svg';
 import informationBold from '@/assets/svg/information_bold.svg';
 import insecurity from '@/assets/svg/insecurity.svg';
-import iPGE from '@/assets/svg/IPGE.svg';
+import iPGE from '@/assets/svg/iPGE.svg';
 import left from '@/assets/svg/left.svg';
 import link from '@/assets/svg/link.svg';
 import music from '@/assets/svg/music.svg';

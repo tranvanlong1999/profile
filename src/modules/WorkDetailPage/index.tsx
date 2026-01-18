@@ -26,7 +26,7 @@ const WorkDetailPage = ({ project }: { project: Project }) => {
       <ProjectGallery images={project.galleryImages} />
 
       {/* Footer Cards - Shared from HomePage pattern */}
-      <div className="container mx-auto px-4 pb-20">
+      <div className="container mx-auto px-5 2xl:px-0 pb-20">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
           <div className="md:col-span-3">
             <ProfileCard delay={0.1} />

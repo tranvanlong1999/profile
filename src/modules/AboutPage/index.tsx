@@ -39,7 +39,7 @@ const AboutPage = () => {
             },
           },
         }}
-        className="container mx-auto px-4 py-12 md:py-20 max-w-[1200px]"
+        className="container mx-auto px-5 2xl:px-0 py-12 md:py-20 max-w-[1200px]"
       >
         <VStack spacing={isMobile ? 12 : 24}>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">

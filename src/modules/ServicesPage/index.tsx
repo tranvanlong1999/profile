@@ -38,7 +38,7 @@ const ServicesPage = () => {
             },
           },
         }}
-        className={`container mx-auto px-4 ${isMobile ? 'py-12' : 'py-24'} max-w-[1200px]`}
+        className={`container mx-auto px-5 2xl:px-0 ${isMobile ? 'py-12' : 'py-24'} max-w-[1200px]`}
       >
         <VStack spacing={isMobile ? 12 : 24}>
           <div className="flex flex-col gap-10">

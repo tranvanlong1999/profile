@@ -14,7 +14,7 @@ interface ProjectContentProps {
 
 const ProjectContent = ({ date, client, services, year, description, about }: ProjectContentProps) => {
   return (
-    <div className="container mx-auto px-4 py-12 md:py-16">
+    <div className="container mx-auto px-5 2xl:px-0 py-12 md:py-16">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
         {/* Detail Info Card */}
         <div className="md:col-span-4 lg:col-span-3">

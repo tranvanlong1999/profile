@@ -4,7 +4,7 @@ import React from 'react';
 
 const ProjectGallery = ({ images }: { images: { src: string; className: string }[] }) => {
   return (
-    <div className="container mx-auto px-4 pb-20">
+    <div className="container mx-auto px-5 2xl:px-0 pb-20">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
         {images.map((img, index) => (
           <motion.div

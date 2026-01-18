@@ -35,7 +35,7 @@ const ContactPage = () => {
             },
           },
         }}
-        className={`container mx-auto px-4 ${isMobile ? 'py-12' : 'py-20'} max-w-[1200px]`}
+        className={`container mx-auto px-5 2xl:px-0 ${isMobile ? 'py-12' : 'py-20'} max-w-[1200px]`}
       >
         <VStack spacing={isMobile ? 12 : 32}>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-stretch">

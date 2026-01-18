@@ -14,7 +14,7 @@ const WorksPage = () => {
       initial="hidden"
       animate="visible"
       transition={{ staggerChildren: 0.1 }}
-      className={`container mx-auto px-4 ${isMobile ? 'py-12' : 'py-20'} max-w-[1200px]`}
+      className={`container mx-auto px-5 2xl:px-0 ${isMobile ? 'py-12' : 'py-20'} max-w-[1200px]`}
     >
       <VStack spacing={isMobile ? 12 : 32}>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">

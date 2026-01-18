@@ -19,7 +19,7 @@ const Header = () => {
           isScrolled ? 'py-4 bg-[#0f0f0f]/80 backdrop-blur-md' : 'py-8 bg-transparent'
         }`}
       >
-        <div className="container px-4 mx-auto 2xl:px-auto max-w-[1200px]">
+        <div className="container px-5 2xl:px-0 mx-auto max-w-[1200px]">
           <div className="flex items-center justify-between">
             {/* Logo Section */}
             <div className="flex-shrink-0">

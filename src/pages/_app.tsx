@@ -1,4 +1,5 @@
 import '@/styles/globals.css';
+import 'animate.css';
 
 import dayjs from 'dayjs';
 import relativeTime from 'dayjs/plugin/relativeTime';
@@ -8,6 +9,7 @@ import Head from 'next/head';
 import type { ReactNode } from 'react';
 
 import { fontSans, fontSerif } from '@/assets/fonts';
+import ErrorBoundary from '@/components/ErrorBoundary';
 import { MainLayout, ModuleLayout } from '@/components/layouts';
 import { siteConfig } from '@/config/site';
 import Provider from '@/lib/Provider';
@@ -26,7 +28,7 @@ const MyApp = (props: AppPropsWithLayout) => {
   const getLayout = Component.getLayout ?? ((page: ReactNode) => <MainLayout>{page}</MainLayout>);
 
   return (
-    <>
+    <ErrorBoundary>
       <Head>
         <title>{siteConfig.name}</title>
         <meta property="og:description" content={siteConfig.description} />
@@ -57,7 +59,7 @@ const MyApp = (props: AppPropsWithLayout) => {
           <ModuleLayout>{getLayout(<Component {...pageProps} />)}</ModuleLayout>
         </Provider>
       </div>
-    </>
+    </ErrorBoundary>
   );
 };
 

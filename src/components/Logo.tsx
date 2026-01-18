@@ -1,11 +1,18 @@
-import type { ImageProps } from 'next/image';
-import Image from 'next/image';
+import { motion } from 'framer-motion';
 import React from 'react';
 
-interface Props extends Omit<ImageProps, 'alt' | 'src'> {}
-
-const Logo = (props: Props) => {
-  return <Image width={32} height={32} {...props} priority alt="logo" src="/images/logo.svg" />;
+const Logo = () => {
+  return (
+    <motion.div
+      className="relative flex items-center justify-center cursor-pointer group"
+      whileHover={{ scale: 1.02 }}
+      whileTap={{ scale: 0.98 }}
+    >
+      <span className="text-xl md:text-2xl font-bold text-white tracking-tight">
+        Grid<span className="text-white/90">X</span>
+      </span>
+    </motion.div>
+  );
 };
 
 export default Logo;

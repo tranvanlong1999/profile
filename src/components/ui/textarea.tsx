@@ -16,6 +16,8 @@ export const textAreaVariants = cva(
         default: '',
         filled: 'bg-background',
         floating: '',
+        premium:
+          'bg-[#131313] border-none rounded-xl p-[30px] text-white placeholder:text-zinc-600 focus-visible:bg-[#151515] transition-all text-base font-medium focus-visible:ring-0 focus-visible:ring-offset-0 min-h-[140px] resize-none',
       },
       size: {
         default: 'min-h-14 py-4 px-3 text-sm rounded-sm',

@@ -6,7 +6,6 @@ import { Controller, FormProvider, useFormContext } from 'react-hook-form';
 
 import { Label } from '@/components/ui/label';
 import { cn } from '@/lib/utils';
-import type { FCC } from '@/types';
 
 export interface FormWrapperProps<T extends FieldValues> {
   form: UseFormReturn<T, any>;
@@ -83,11 +82,17 @@ type FormItemContextValue = {
 
 const FormItemContext = React.createContext<FormItemContextValue>({} as FormItemContextValue);
 
-const FormItem: FCC = ({ children }) => {
-  const id = React.useId();
+const FormItem = React.forwardRef<HTMLDivElement, React.HTMLAttributes<HTMLDivElement>>(
+  ({ className, ...props }, ref) => {
+    const id = React.useId();
 
-  return <FormItemContext.Provider value={{ id }}>{children}</FormItemContext.Provider>;
-};
+    return (
+      <FormItemContext.Provider value={{ id }}>
+        <div ref={ref} className={cn('space-y-2', className)} {...props} />
+      </FormItemContext.Provider>
+    );
+  }
+);
 FormItem.displayName = 'FormItem';
 
 const FormLabel = React.forwardRef<

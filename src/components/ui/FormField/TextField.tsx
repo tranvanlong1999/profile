@@ -4,7 +4,7 @@ import type { Control, FieldPath, FieldPathValue, FieldValues } from 'react-hook
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '../form';
 import type { InputProps } from '../input';
 import { Input } from '../input';
-import { Show } from '../Utilities';
+import { Show, VStack } from '../Utilities';
 
 interface Props<T extends FieldValues = FieldValues> extends InputProps {
   control: Control<T>;
@@ -30,18 +30,18 @@ const TextField = <T extends FieldValues>({
       control={control}
       name={props.name}
       render={({ field }) => (
-        <FormItem>
-          <FormControl>
-            <div>
-              <Show when={!!label}>
-                <FormLabel className={labelClassName}>
-                  {label} {required && <span className="text-error-light">*</span>}
-                </FormLabel>
-              </Show>
+        <FormItem className="w-full">
+          <VStack spacing={0}>
+            <Show when={!!label}>
+              <FormLabel className={labelClassName}>
+                {label} {required && <span className="text-error-light">*</span>}
+              </FormLabel>
+            </Show>
+            <FormControl>
               <Input {...field} {...props} className={className} />
-              <FormMessage className="mt-1 text-xs" />
-            </div>
-          </FormControl>
+            </FormControl>
+            <FormMessage className="mt-1 text-xs ml-[30px]" />
+          </VStack>
         </FormItem>
       )}
     />

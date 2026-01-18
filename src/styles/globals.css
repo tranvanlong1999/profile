@@ -183,6 +183,26 @@
   .drop-shadow-arrow {
     filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.16));
   }
+
+  .icon-box {
+    @apply w-20 h-20 rounded-2xl bg-icon-gradient border border-white/5 flex items-center justify-center text-white shrink-0;
+  }
+
+  .contact-label {
+    @apply text-zinc-500 text-xs font-bold uppercase tracking-wider mb-1;
+  }
+
+  .contact-value {
+    @apply text-white text-lg font-bold;
+  }
+
+  .form-input {
+    @apply bg-gridx-input border-none text-gray-300 placeholder:text-zinc-600 h-16 rounded-xl px-6;
+  }
+
+  .form-btn {
+    @apply w-full h-16 rounded-2xl bg-[#2a2a2a] hover:bg-white hover:text-black text-white font-medium text-lg mt-2 transition-colors;
+  }
 }
 
 ::-webkit-scrollbar-track {

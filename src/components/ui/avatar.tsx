@@ -35,15 +35,17 @@ const AvatarFallback = React.forwardRef<
 ));
 AvatarFallback.displayName = AvatarPrimitive.Fallback.displayName;
 
-interface AvatarProps extends React.HTMLAttributes<HTMLImageElement> {
+interface AvatarProps extends React.ComponentPropsWithoutRef<typeof AvatarPrimitive.Image> {
   src?: string;
+  alt?: string;
   children?: React.ReactNode;
+  rootClassName?: string;
 }
 
-const Avatar = ({ src, children, ...props }: AvatarProps) => {
+const Avatar = ({ src, alt, children, rootClassName, ...props }: AvatarProps) => {
   return (
-    <AvatarRoot {...props}>
-      <AvatarImage src={src} />
+    <AvatarRoot className={rootClassName}>
+      <AvatarImage src={src} alt={alt} {...props} />
       <AvatarFallback>{children}</AvatarFallback>
     </AvatarRoot>
   );

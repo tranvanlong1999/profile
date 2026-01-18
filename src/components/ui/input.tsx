@@ -20,6 +20,8 @@ export const inputVariants = cva(
       variant: {
         default: 'bg-background',
         filled: 'bg-background',
+        premium:
+          'bg-[#131313] border-none rounded-xl px-[30px] text-white placeholder:text-zinc-600 focus-visible:bg-[#151515] transition-all text-base font-medium focus-visible:ring-0 focus-visible:ring-offset-0',
       },
       size: {
         sm: 'h-11 px-3 py-2 text-sm rounded-sm file:text-sm file:font-medium',

@@ -378,6 +378,13 @@ module.exports = {
           DEFAULT: '#E6E6E6',
           border: '#B6B6B6',
         },
+        gridx: {
+          background: '#0f0f0f',
+          card: '#1e1e1e',
+          input: '#000000',
+          'icon-start': '#2a2a2a',
+          'icon-end': '#161616',
+        },
       },
       backgroundImage: {
         'neon-grad-1': 'linear-gradient(180deg, #EDFFC2 0%, #EDFFC2 50%, #D3FE6F 100%);',
@@ -391,6 +398,7 @@ module.exports = {
         'red-grad-1': 'linear-gradient(180deg, #FFEAEE 0%, #FFEAEE 50%, #FEBDC5 100%);',
         'green-grad-1': 'linear-gradient(180deg, #EDFFC2 0%, #EDFFC2 50%, #D3FE6F 100%);',
         'green-grad-2': 'linear-gradient(180deg, #EDFFC2 0%, #CEFC65 50%, #D3FE6F 100%);',
+        'icon-gradient': 'linear-gradient(to bottom right, #2a2a2a, #161616)',
       },
       borderRadius: {
         '3xl': '36px',
@@ -413,10 +421,15 @@ module.exports = {
           from: { height: 'var(--radix-accordion-content-height)' },
           to: { height: 0 },
         },
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        marquee: 'marquee 20s linear infinite',
       },
     },
   },

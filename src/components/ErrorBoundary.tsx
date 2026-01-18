@@ -27,13 +27,16 @@ class ErrorBoundary extends Component<Props, State> {
   public render() {
     if (this.state.hasError) {
       return (
-        <div className="bg-background flex h-screen w-screen flex-col items-center justify-center text-center text-white">
-          <div className="mb-10 text-xl">Oops, something wrong.</div>
+        <div className="bg-[#0f0f0f] flex h-screen w-screen flex-col items-center justify-center text-center">
+          <div className="mb-8 text-2xl md:text-3xl font-bold text-white">Oops, something went wrong.</div>
+          <p className="text-zinc-400 mb-8 max-w-md">
+            We apologize for the inconvenience. Please try refreshing the page.
+          </p>
           <button
-            className="flex h-10 items-center justify-center bg-pink-600 px-6 text-sm"
+            className="bg-[#323232] text-white px-8 py-3 rounded-[16px] hover:bg-white hover:text-black transition-colors duration-300 font-medium"
             onClick={() => window.location.reload()}
           >
-            Click here to reset!
+            Refresh Page
           </button>
         </div>
       );

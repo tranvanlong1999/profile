@@ -5,7 +5,7 @@ import type { Control, FieldPath, FieldPathValue, FieldValues } from 'react-hook
 import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '../form';
 import type { TextAreaProps } from '../textarea';
 import { TextArea } from '../textarea';
-import { Show } from '../Utilities';
+import { Show, VStack } from '../Utilities';
 
 interface Props<T extends FieldValues = FieldValues> extends TextAreaProps {
   control: Control<T>;
@@ -22,6 +22,7 @@ const TextAreaField = <T extends FieldValues>({
   control,
   label,
   required,
+  className,
   ...props
 }: Props<T>) => {
   return (
@@ -30,18 +31,18 @@ const TextAreaField = <T extends FieldValues>({
       name={props.name}
       defaultValue={defaultValue}
       render={({ field }) => (
-        <FormItem>
-          <FormControl>
-            <div>
-              <Show when={!!label}>
-                <FormLabel className={labelClassName}>
-                  {label} {required && <span className="text-error-light">*</span>}
-                </FormLabel>
-              </Show>
-              <TextArea {...field} {...props} />
-            </div>
-          </FormControl>
-          <FormMessage className="mt-1 text-xs" />
+        <FormItem className="w-full">
+          <VStack spacing={0}>
+            <Show when={!!label}>
+              <FormLabel className={labelClassName}>
+                {label} {required && <span className="text-error-light">*</span>}
+              </FormLabel>
+            </Show>
+            <FormControl>
+              <TextArea {...field} {...props} className={className} />
+            </FormControl>
+            <FormMessage className="mt-1 text-xs ml-[30px]" />
+          </VStack>
         </FormItem>
       )}
     />

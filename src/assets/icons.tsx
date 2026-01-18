@@ -72,7 +72,7 @@ import play from '@/assets/svg/play.svg';
 import sound from '@/assets/svg/sound.svg';
 import up from '@/assets/svg/up.svg';
 import wallet from '@/assets/svg/wallet.svg';
-import x from '@/assets/svg/x.svg';
+import x from '@/assets/svg/X.svg';
 import xBold from '@/assets/svg/x_bold.svg';
 
 export type Icon = LucideIcon;
